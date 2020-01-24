@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+            body {
+                font-family: sans-serif;
+            }
+
+            #container {
+                display: flex;
+            }
+
+            #container div {
+                border: solid 1px black;
+                width: calc(100% / 3 - 2rem);
+                padding: 1rem;
+                margin: 1rem;
+                border-radius: 0.5rem;
+                text-align: center;
+                background-color: lightskyblue;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Acme Employees DOM</h1>
+        <div id="container">
+            <div>A</div>
+            <div>A</div>
+            <div>A</div>
+        </div>
+    </body>
+    <script>
+        const employees = [
+        { id: 1, name: 'moe'},
+        { id: 2, name: 'larry'},
+        { id: 4, name: 'shep'},
+        { id: 3, name: 'curly'},
+        { id: 5, name: 'groucho'},
+        { id: 6, name: 'harpo'},
+        { id: 8, name: 'shep Jr.'},
+        { id: 99, name: 'lucy'}
+        ];
+
+        let divs = document.querySelector('#container')
+        
+        const makeEmployeeCard = (list) => {
+            list.forEach((emp) => {
+                let newDiv = document.createElement('div')
+                newDiv.innerHTML = emp.name
+                divs.appendChild(newDiv)
+            })
+        }
+
+        makeEmployeeCard(employees)
+
+
+    </script>
+</html>
