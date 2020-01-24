@@ -22,7 +22,9 @@
                 text-align: center;
                 background-color: lightskyblue;
             }
-
+            .selected {
+                background-color: yellow;
+            }
         </style>
     </head>
     <body>
@@ -51,9 +53,14 @@
                 divs.appendChild(newDiv)
             })
         }
-
         makeEmployeeCard(employees)
 
+        let div = [...document.querySelectorAll('#container div')]
+        // console.log(div)
+        divs.addEventListener('click', (ev) => {
+            ev.target.classList.toggle('selected');
 
+            console.log(ev)
+        })
     </script>
 </html>
