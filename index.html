@@ -1,12 +1,16 @@
 <html>
     <head>
         <style>
+            * {
+                box-sizing: border-box;
+            }
             body {
                 font-family: sans-serif;
             }
 
             #container {
                 display: flex;
+                flex-wrap: wrap;
             }
 
             #container div {
@@ -24,9 +28,6 @@
     <body>
         <h1>Acme Employees DOM</h1>
         <div id="container">
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
         </div>
     </body>
     <script>
